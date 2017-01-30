@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My first attempt to a blog</title>
+    <meta name="author" content="Ola Frick">
+    <link rel="icon" href="img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Enriqueta|Ubuntu:400,500" rel="stylesheet">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/all.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="code.js"></script>
+  </head>
+  <body>
+    
+    <!-- ==========  HEADER AREA  ==========
+    Only displayed on Small Devices, Tablets  -->
+    
+ <div class="container">
+  <div class="row">
+    <div class="visible-xs visible-sm hidden-md-up header-area">
+      <img class="logo-title-mobile" src="img/logo2.png">
+      <p class="logo-description-mobile">The Shape of Blogs to Come</p>
+    </div>
+    </div> <!-- row 1 end -->
+    <!-- ==========  BLOG AREA  ========== -->
+    <div class="row no-gutter">
+      <div class="col-lg-offset-1 col-lg-6 col-md-7 blog-module">
+        <figure class="gallery-item">
+          <img class="blog-image">
+          <figcaption class="img-title">
+          <p class="photo-credits"></p>
+          </figcaption>
+        </figure>
+        <div class="blog-inner-padding">
+          <h2 class="blog-title"></h2>
+          <p class="blog-date"></p>
+          <span class="blog-break">|</span>
+          <p class="blog-author">By </p>
+          <p class="blog-content"></p>
+          <p class="blog-epilogue"></p>
+          <!-- Blog Footer, Share content-->
+          <a class="btnz share facebook" href="http://www.facebook.com/sharer/sharer.php?s=100&p[url]=http://www.example.com&p[images][0]=&p[title]=Title%20Goes%20Here&p[summary]=Description%20goes%20here!" target="_blank" onclick="window.open(this.href,'targetWindow','toolbar=no,location=0,status=no,menubar=no,scrollbars=yes,resizable=yes,width=600,height=250'); return false"><i class="fa fa-facebook fa-2"></i> Share on Facebook</a>
+          <span class="endknot">|</span>
+          <a class="btnz share twitter" href="https://twitter.com/intent/tweet?text=your-text&url=YOUR-URL&via=Twitter-Handler"><i class="fa fa-twitter"></i> Tweet</a>
+          </div> <!-- blog-inner-padding end -->
+          </div> <!-- blog module end -->
+          <!-- ==========  SIDEBAR AREA  ==========
+          The Logo is displayed on Medium & Large Devices -->
+          <div class="col-lg-4 col-md-5 visible-sm-up sidebar-area">
+            <div class="sidebar-padding">
+              <img class="logo-title-desktop hidden-xs hidden-sm" src="img/logo2.png">
+              <p class="logo-description-desktop hidden-xs hidden-sm">The Shape of Blogs to Come</p>
+              <h3 class="scroller-title">Latest Posts</h3>
+              <!-- the sidebar module (scroller) start -->
+              <div class="sidebar-module">
+                <div class="scroller">
+                <ol class="list-unstyled"></ol>
+              </div>
+              </div> <!-- sidebar-module end -->
+              </div> <!-- sidebar-padding end -->
+              </div> <!-- sidebar-area end -->
+              <!-- SOCIAL AREA start -->
+              <div class="col-lg-4 col-sm-12 social-area">
+                <div class="social-connect">
+                  <a class="fa fa-facebook-square fa-2x" href="https://facebook.com" target="_blank" aria-hidden="true"></a>
+                  <a class="fa fa-twitter-square fa-2x" href="https://twitter.com" target="_blank" aria-hidden="true"></a>
+                  <a class="fa fa-pinterest-square fa-2x" href="https://pinterest.com" target="_blank" aria-hidden="true"></a>
+                  <a class="fa fa-gratipay fa-2x" href="https://gratipay.com" target="_blank" aria-hidden="true"></a>
+                  <a class="fa fa-stack-overflow fa-2x" href="https://stackoverflow.com" target="_blank" aria-hidden="true"></a>
+                  <a class="fa fa-git-square fa-2x" href="https://github.com" target="_blank" aria-hidden="true"></a>
+                  <a class="fa fa-envelope-square fa-2x" href="mailto:info@asablog.org" target="_blank" aria-hidden="true"></a>
+                  
+                  <!-- Text Link to trigger modal -->
+                  <a class="mini" data-toggle="modal" data-target=".aboutAsaModal">Learn more about the Blogger | <span>Contact</span></a>
+                </div>
+                </div> <!-- social area end -->
+                <!-- ==========  MODAL  ========== -->
+                <div class="modal fade aboutAsaModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h4 class="modal-title" id="myModalLabel">About Me</h4>
+                      </div>
+                      <div class="modal-body">
+                        <div class="imageborder"><img src="img/asa11.jpg"></div>
+                        <h4>Overflowing with ideas, How about you?</h4>
+                        <hr>
+                        <p>Åsa Carlsson-McCoy is a writer and blogger, specializing in strategic marketing and branding, is a co-founder and editor of Blogger Magazine, and co-owner and creative director of Two Hearts. She lives with her husband and four children in Nashville, Tennessee.</p>
+                        <p>If you like my design and would like to get in touch, my info is here:</p>
+                        <hr>
+                        <address>
+                          <strong>Åsa Carlsson-McCoy</strong>
+                          <br> 1355 Market Street, Suite 900
+                          <br> Nashville, Tennessee 94103
+                          <br>
+                        <abbr title="Phone">P:</abbr> (123) 456-7890
+                      </address>
+                      <address>
+                        <strong>Get in touch</strong>
+                        <br>
+                        <a href="mailto:info@asablog.org">info@asablog.org</a>
+                      </address>
+                      <a class="fa fa-facebook-square fa-2x" href="https://facebook.com" target="_blank" aria-hidden="true"></a>
+                      <a class="fa fa-twitter-square fa-2x" href="https://twitter.com" target="_blank" aria-hidden="true"></a>
+                      <a class="fa fa-pinterest-square fa-2x" href="https://pinterest.com" target="_blank" aria-hidden="true"></a>
+                      <a class="fa fa-gratipay fa-2x" href="https://gratipay.com" target="_blank" aria-hidden="true"></a>
+                      <a class="fa fa-stack-overflow fa-2x" href="https://stackoverflow.com" target="_blank" aria-hidden="true"></a>
+                      <a class="fa fa-git-square fa-2x" href="https://github.com" target="_blank" aria-hidden="true"></a>
+                      <a class="fa fa-envelope-square fa-2x" href="mailto:info@asablog.org" target="_blank" aria-hidden="true"></a>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+                </div><!-- Modal End -->
+                </div><!-- row 2 end -->
+                <!--  ==========  FOOTER AREA  ========== -->
+                <div class="row">
+                  <div class="footer-area">
+            <p>© 2011-2016 Åsas Blog All Rights Reserved.</p>
+          <div class="blog-divider"></div>
+        </div>
+   </div>
+ </div><!-- container end -->
+</body>

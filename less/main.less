@@ -1,0 +1,415 @@
+body {
+    background-image: url("@{images}/husk.png");
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+/*==================================================
+=                     MIXINS                       =
+==================================================*/
+
+
+.shadow-1 {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-2 {
+    -o-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -ms-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.rounded-softly {
+    -o-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.transform-ease {
+    -o-transition: color 1s ease-out;
+    -ms-transition: color 1s ease-out;
+    -moz-transition: color 1s ease-out;
+    -webkit-transition: color 1s ease-out;
+    transition: color 1s ease-out;
+}
+
+.little-description {
+    font-family: @font-family-sans-serif;
+    font-weight: 500;
+    font-size: 0.9em;
+    text-align: center;
+    color: @gray;
+
+}
+
+.background-img-top {
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: 100%
+}
+
+/* Scrollbar Design */
+
+::-webkit-scrollbar {
+    width: @font-size-small;
+}
+
+::-webkit-scrollbar-track {
+    .shadow-2;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #999;
+    border-radius: 20px;
+}
+
+/* This makes the Cursor pointy over a */
+
+a {
+    cursor: pointer;
+}
+
+/* Removes padding from the (no gutter) container */
+
+.no-gutter > [class*='col-'] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+/*==========  HEADER AREA  ==========*/
+/* Only displayed on Small Devices, Tablets */
+
+
+.header-area {
+    text-align: center;
+    background-image: url("@{images}/circle7.png");
+    .background-img-top;
+    padding: 8px 0 16px 0;
+
+    .logo-title-mobile {
+        width: 80%;
+        margin-top: 32px;
+        margin-bottom: 6px;
+        padding-right: 6px;
+    }
+
+    .logo-description-mobile {
+        .little-description;
+        margin-bottom: 0;
+    }
+}
+
+/*==========  BLOG AREA  ==========*/
+
+
+.blog-module {
+    background-color: @soft-yellow;
+    border: 1px dashed #CCC;
+    .shadow-1;
+    .rounded-softly;
+    margin-bottom: 20px;
+
+    .blog-image {
+        height: auto;
+        width: 100%;
+        border: 1px solid black position: relative;
+    }
+
+    .img-title {
+        position: absolute;;
+        top: 300px;
+        height: 38px;
+        width: 50%;
+        opacity: 0.7;
+        display: none;
+        background-color: @gray-darker;
+        border: 2px solid #222;
+        .shadow-1;
+        .rounded-softly;
+    }
+
+    .img-title p {
+        position: absolute;
+        .transform-ease;
+        top: 28%;
+        width: 100%;
+        text-align: left;
+        padding-left: 20px;
+        font-family: @font-family-sans-serif-2;
+        font-size: 13px;
+        font-weight: 300;
+        color: #fff;
+    }
+
+    /* Blog Padding Area */
+
+    .blog-inner-padding {
+        padding: 32px;
+
+        .blog-title {
+            font-family: @font-family-sans-serif-2;
+            font-size: @font-size-h2;
+            font-weight: 500;
+            margin: 0 0 3px 0;
+        }
+
+        .blog-date,
+        .blog-author {
+            font-family: @font-family-sans-serif-2;
+            color: #999;
+            font-size: 0.85em;
+            text-align: right;
+            display: inline-block;
+            margin: 0 0 3px 0;
+        }
+
+        .blog-break {
+            display: inline-block;
+            padding: 0 6px;
+            font-size: @font-size-small;
+        }
+
+        .blog-divider {
+            border-bottom: 1px solid @gray-dark;
+            margin: 8px 0 6px 0;
+        }
+
+        .blog-content {
+            font-family: @font-family-serif;
+            font-size: 1em;
+            line-height: 26px;
+            letter-spacing: 0.3px;
+            margin-bottom: 18px;
+        }
+
+        .blog-epilogue {
+            font-family: @font-family-serif;
+            font-size: 0.8em;
+            line-height: 24px;
+            letter-spacing: 0.3px;
+            margin-bottom: 18px;
+            font-style: italic;
+        }
+
+        /* Blog Footer, Share Content */
+
+        .btnz {
+            border: none;
+            font-family: @font-family-sans-serif-2;
+            text-decoration: none;
+            font-size: @font-size-small;
+            color: #999;
+        }
+
+        .btnz:hover {
+            color: #000;
+        }
+
+        .endknot {
+            color: #999;
+            padding: 0 10px;
+            font-size: @font-size-small;
+        }
+    }
+}
+
+
+/*==========  SIDEBAR AREA  ==========*/
+/* The Logo is displayed on Medium & Large Devices */
+
+.sidebar-area {
+    background-color: @gray-natural;
+    .rounded-softly;
+    .shadow-1;
+    margin-top: 1px;
+
+    .sidebar-padding {
+        background-image: url("@{images}/circle6.png");
+        .background-img-top;
+        padding: 20px 20px 50px 30px;
+        margin: 0;
+
+        .logo-title-desktop {
+            width: 94%;
+            margin-top: 40px;
+            margin-bottom: 6px;
+            .center-block;
+        }
+
+        .logo-description-desktop {
+            .little-description;
+            margin-bottom: 20px;
+        }
+
+        .scroller-title {
+            font-family: @font-family-sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+            font-size: 1.2em;
+            color: #333;
+            height: 28px;
+            padding: 5px;
+            padding-left: 10px;
+            background-color: #b8b8b8;
+            .rounded-softly;
+            margin: 0 0 14px 0;
+        }
+
+        .sidebar-module {
+
+            .scroller {
+                max-height: 280px;
+                overflow-y: scroll;
+                overflow-x: hidden;
+
+                img {
+                    width: 86px;
+                    background-color: @gray-natural;
+                    border: 0 none;
+                    box-shadow: none;
+                    display: inline-block;
+                    margin: 0 10px 0 10px;
+                }
+
+                .previewTextWrapper {
+                    display: inline-block;
+
+                    a {
+                        font-family: @font-family-sans-serif-2;
+                        color: @text-color;
+                        text-transform: uppercase;
+                        font-weight: 500;
+                    }
+
+                    a:hover {
+                        color: @gray;
+                        .transform-ease;
+                    }
+
+                    p {
+                        font-size: 0.8em;
+                        margin: 0;
+                    }
+                }
+
+                .divider {
+                    border-bottom: 1px dashed #000;
+                    display: blocks;
+                    margin-bottom: 8px;
+                    margin-top: 8px;
+                    margin-left: 10px;
+                    width: 92%;
+                }
+            }
+        }
+    }
+}
+
+/*==========  SOCIAL AREA  ==========*/
+
+.social-connect {
+    margin-top: 20px;
+    margin-left: 40px;
+    height: 30px;
+    text-decoration: none;
+
+    .fa {
+        .transform-ease;
+        color: #999999;
+        font-size: 24px;
+        padding-right: 10px;
+    }
+
+    a:hover {
+        text-decoration: none;
+        color: #333333;
+    }
+
+    .mini {
+        display: inline-block;
+        margin-top: 10px;
+        font-size: 10px;
+        color: #999999;
+        text-transform: uppercase;
+        
+        span {
+            color: #FFF;
+        }
+    }
+}
+
+/*==========  MODAL  ==========*/
+
+.aboutAsaModal {
+
+    img {
+        display: block;
+        width: 100%;
+        padding-bottom: 16px;
+    }
+
+    .fa {
+        text-decoration: none;
+        padding-right: 10px;
+    }
+
+    .fa:hover {
+        color: @gray;
+        text-decoration: none;
+        .transform-ease
+    }
+}
+
+/*==========  FOOTER AREA  ==========*/
+/* Simple © copyright */
+
+.footer-area {
+    padding-top: 100px;
+    font-size: 9px;
+    text-transform: uppercase;
+}
+
+
+/*==================================================
+=            Bootstrap 3 Media Queries             =
+==================================================*/
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom Values for Small Devices, Tablets */
+
+@media only screen and (max-width: 993px) {
+    body {
+        background-image: none;
+        background-color: #cccccc;
+        padding-top: 0;
+        // padding-bottom: 0;
+    }
+
+    .blog-module .img-title p {
+        display: none;
+    }
+
+    .blog-module .img-title {
+        opacity: 0;
+    }
+
+    .blog-module .blog-inner-padding .blog-title {
+        font-size: @font-size-h3;
+    }
+
+    .sidebar-area .sidebar-padding {
+        background-image: none;
+    }
+
+.previewTextWrapper a {
+        font-size: 11px;
+    }
+
+}

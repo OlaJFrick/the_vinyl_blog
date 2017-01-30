@@ -1,5 +1,5 @@
 # my vinyl blog
-A simple excersis in JavaScript, Bootstrap, Less & HTML using JSON as post storage.
+A simple excersise in making a respsonsive Blog using JavaScript, Bootstrap, Less & HTML using JSON for storing.
 
 ## Installation
 Clone or download the source files.
